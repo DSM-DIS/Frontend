@@ -1,11 +1,15 @@
 import React from "react";
-import { mainWrapper } from "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import LoginContainer from "./Containers/Login/LoginContainer";
 
 const App = () => {
   return (
-    <div className={mainWrapper}>
-      <h1>Hello, Webpack!!! with React</h1>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/login" component={LoginContainer} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 
